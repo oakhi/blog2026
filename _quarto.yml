@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "blog2026"
+  title: "Events and Recollections"
   navbar:
     right:
       - about.qmd

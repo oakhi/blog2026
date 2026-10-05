@@ -1,5 +1,5 @@
 ---
-title: "blog2026"
+title: "Selected Thoughts"
 listing:
   contents: posts
   sort: "date desc"
