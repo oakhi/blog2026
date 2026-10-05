@@ -1,0 +1,106 @@
+---
+title: "Family Gathering"
+author: "DK"
+date: "2026-09-27"
+categories: [gatherings]
+execute: 
+  echo: false
+---
+
+Returning from a western city road trip follows a unwritten script: minimum pit stops and pack some snacks in order to get home as fast as legally possible.
+
+We seldom consider sitting down for a meal, since that would negate the minutes saved traveling at allowable speeds—hence the importance of snacks consumed in the car.
+
+On this particular visit, we decided to join the group just two days before the event.
+
+Because of the short planning horizon, we weren’t even at our destination for twenty-four hours, and we didn't plan any sightseeing.
+
+The mission of this trip was simple: to get better acquainted with the children of our nieces and nephews—kids we seldom see, let alone interact with.
+
+### A Setting Built for Connection
+
+Staying at a hotel is convenient but it isolates families into separate rooms, but choosing a short-term rental proved to be the right choice.
+
+The layout was built for interactions: three bedrooms on the west side, four more on the east, with common areas; kitchen, dining and family rooms. And all thirteen beds would be occupied by the visiting groups.
+
+In total, there were ten children under one roof, ranging in age from nine down to one, with clusters at ages six and four.
+
+Watching them interact was a reminder in human nature.
+
+The children knew how to associate instinctively—falling into games, laughter, and shared spaces without hesitation or awkwardness.
+
+The adults, on the other hand, had to relearn how to do it.
+
+We were busy getting involved in a shared game room, an outdoor pool, and a bubbling hot tub.
+
+It provided the grown-ups a chance to learn again how to be around children at play.
+
+### The Cost of Gathering
+
+Even in a city as large and diverse as Las Vegas, securing a reservation for thirty people was a challenge.
+
+We were told to confirm our table an hour before arrival, only to be reminded of a spending minimum upon calling.
+
+When we finally arrived, we were asked to wait twenty minutes—which stretched closer to an hour before we finally tasted some food.
+
+Yet, once the food began to flow, it was exceptional.
+
+Enhanced by the atmosphere created by the arrangement of children seated in bench seats into their newly formed groups, facing their parents.
+
+With the grandparents in the middle section of the room, flanked by 2 tables with grandchildren.
+
+When the check arrived, it rivaled the cost of the last used car I purchased. I didn't feel the price was high.
+
+More importantly, we had gathered in one place to reaffirm our bonds as descendants of our parents.
+
+### The Road Home
+
+The next morning brought a slow, family by family checkout process, each leaving for their next destination.
+
+Someone had ordered bagels and cream cheese for a light send-off.
+
+With no more plans left, we waited until everyone else had departed, locked the front door, and hit the road.
+
+We planned our pit stops and estimated our arrival time at home as we pulled out of Clark County.
+
+But then, after two and a half hours of driving—just as we passed Cedar City near mile marker 37—we received a phone call from a group that had left hours before us.
+
+They told us they were waiting at a rest stop about thirty minutes ahead. Furthermore, they had stopped by a Korean market along the way.
+
+```{r}
+library(leaflet)
+
+lat <- 37.980306
+lon <- -112.736111
+
+leaflet() |>
+  addTiles() |>
+  setView(
+    lng = lon,
+    lat = lat,
+    zoom = 15
+  ) |>
+  addMarkers(
+    lng = lon,
+    lat = lat,
+    popup = "37°58'49.1\"N 112°44'10.0\"W"
+  )
+```
+
+As we were getting hungry, it was the most welcome message imaginable.
+
+It was the fourth daughter and her husband, thoughtfully looking out for the second and third daughters and their husbands.
+
+They were standing outside, waving as we pulled into the rest stop.
+
+All the Korean favorites were laid out: 떡, 김밥, katsu, and pastries.
+
+We hadn't planned to eat like this, and we certainly weren't expecting it.
+
+However, there along the I-15, between mile markers 87 and 88, we were fed with food that we had grown up with.
+
+This weekend I felt the importance of gathering of family members.
+
+The continuation and confirmation of linkage between generations.
+
+Both the family you are born into and the family you marry into.
