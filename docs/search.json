@@ -14,6 +14,13 @@
     "text": "Three years after the marriage and two children later, we were looking for our first home.\nTwo houses were available, same price, close to each other, same school district with one significant difference.\nOne was facing a busy street and the other was in a neighborhood-only road.\nWe weren’t sure since we were new to house hunting.\nMy mother said,\n\n“Look towards the future when your children are toddlers, would you want them to ride their tricycles near a busy road.”\n\nThat sealed our decision to move into the Indian Hills area of the town.\n\nThe lot south of the new house was empty and was kept that way by the neighbor across from us.\nHe wanted an unencumbered view of Utah Lake.\nOften he would battle the weeds, especially dandelions on the .22 acre (9583 square feet) plot.\nFor our children and the neighbor’s grandson, the empty lot was their playground that was larger than their imagination.\n\nIt was at that house 2 more children joined the family.\nAs my mom predicted our children learned how to ride tricycles and bicycles on the driveway and on the road by the house.\nLater on we learned that the neighbor across the street was at one time a high profile corporate lawyer that worked for what was then the largest corporation in the world.\nWe sold the house when the work assigned me to work overseas.\nWe had realized a sizeable return on investment but most of all because we listened to a more wise voice, we were able to raise the family in relative peace and quiet."
   },
   {
+    "objectID": "posts/20261005 Clear Lake/index.html",
+    "href": "posts/20261005 Clear Lake/index.html",
+    "title": "Clear and Present Goal",
+    "section": "",
+    "text": "During the years working with the young adults, we went camping regularly.\nIt wasn’t because it was a crowd favorite, nor was it the most convenient thing to organize.\nWe did it because of a conversation with another leader at a backyard wedding reception.\nThe newlyweds were using their leader’s home as the venue.\nThe property was located in the Tree Streets neighborhood, framed by mature trees and a gently sloped yard that drifted from east to west. As the evening wore on and the celebration settled, I found the homeowner and began comparing notes.\nForemost on my mind as a new leader was a simple question:\n\nHow do you bring young people together in a way that allows genuine courtships to form and lead to marriage?\n\nHe smiled and shared that his unit held dozens of weddings the past year.\nI was all ears.\n\nHe shared their secret: they went camping as a group.\nFor reasons he couldn’t fully articulate, nature seemed to break down barriers, allowing young people to get acquainted almost effortlessly.\nHe didn’t need to elaborate—the results he quoted were enough for me.\nInspired by his advice, I began searching for campsites that fit a set of constraints:\n\nAccessibility: The campsite had to be within a one-hour drive of our home base.\nCo-ed Accommodations: The location needed to safely and comfortably host both young men and women in the same general area.\n\nIn the end, three locations met our criteria.\nOne was a traditional outdoor campsite, while the other two offered a hybrid experience with the comfort of indoor plumbing and sleeping facilities.\nWith our venues selected, we were ready to put his theory to the test.\n\nlibrary(leaflet)\n\nleaflet() |&gt;\n  addTiles() |&gt;\n\n  addMarkers(\n    lng = -111.55135,\n    lat = 40.71069,\n    popup = \"Snydermill Recreation Camp\"\n  ) |&gt;\n\n  addMarkers(\n    lng = -111.26267,\n    lat = 40.46596,\n    popup = \"Heber Valley Camp\"\n  ) |&gt;\n\n  addMarkers(\n    lng = -111.23708,\n    lat = 40.48112,\n    popup = \"Lake Creek Recreation Camp\"\n  ) |&gt;\n\n  fitBounds(\n    lng1 = -111.55135,\n    lat1 = 40.46596,\n    lng2 = -111.23708,\n    lat2 = 40.71069\n  )"
+  },
+  {
     "objectID": "posts/20260927 Family Gathering/index.html",
     "href": "posts/20260927 Family Gathering/index.html",
     "title": "Family Gathering",
@@ -25,13 +32,13 @@
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "A continuation of thoughts derived from current events and recollections of past events"
+    "text": "A continuation of thoughts derived from current events and recollections of past events."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Selected Thoughts",
     "section": "",
-    "text": "Indian Hills\n\n\n\n\n\n\n\nneighborhoods\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\nDK\n\n\n\n\n\n\n  \n\n\n\n\nFamily Gathering\n\n\n\n\n\n\n\ngatherings\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\nDK\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nwriting\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\nDK\n\n\n\n\n\n\nNo matching items"
+    "text": "Clear and Present Goal\n\n\n\n\n\n\n\noutdoors\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2026\n\n\nDK\n\n\n\n\n\n\n  \n\n\n\n\nIndian Hills\n\n\n\n\n\n\n\nneighborhoods\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\nDK\n\n\n\n\n\n\n  \n\n\n\n\nFamily Gathering\n\n\n\n\n\n\n\ngatherings\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\nDK\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nwriting\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\nDK\n\n\n\n\n\n\nNo matching items"
   }
 ]

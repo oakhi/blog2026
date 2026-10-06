@@ -5,4 +5,4 @@ date: "2026-9-20"
 categories: [writing]
 ---
 
-A continuation of thoughts derived from current events and recollections of past events
+A continuation of thoughts derived from current events and recollections of past events.
