@@ -1,5 +1,5 @@
 ---
-title: "Selected Thoughts"
+title: "Events and Recollections"
 listing:
   contents: posts
   sort: "date desc"
