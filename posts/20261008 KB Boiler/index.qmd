@@ -1,0 +1,52 @@
+---
+title: "Knight Block Winterization"
+author: "DK"
+date: "2026-10-08"
+categories: [comfort, heat]
+---
+
+Ryan from Told Plumbing along with Greg representing REMS Corp. met in the basement of the Knight Building, located at 1 East Center Street, Provo, on the morning or 6 October 2026
+
+The main purpose of the gathering was to winterize the building by turning on the main boiler than services nearly 20,000 square feet of office and restaurant spaces.
+
+The unit was manufactured in 1990 and once a year, a technician initiated a set of sequences that heated water to 180 degrees farenheit and pumped the water to each spaces in the building.
+
+In turn each space or office had a controller that pulled in heated water to create the radiant heat, the old, yet efficient heating method
+
+------------------------------------------------------------------------
+
+The boiler consist of 3 separate systems, water circulation, gas heating and electrical ignition and control
+
+The water circulation was controlled at 35 to 65 psi.
+
+The heated water is pulled to each floor using an in-line pump.
+
+When the water releases its heat the water is returned to the boiler to be re-heated.
+
+It is a closed loop system.
+
+Gas provides the energy to increase the water temperature from room temperature, 80 to 90 degrees up to 170 to 180 degree farenheit.
+
+This heating up takes nearly 2 days and the cooling down takes equally long.
+
+The gas system is similar to home heating, except there is a danger of too much pressure buildup.
+
+There is a pressure sensor and a relief valve that opens to release the water to bring the pressure back down.
+
+The water temperature is set by a limit switch. Turning on the gas heating when the water temperature falls below a certain value.
+
+------------------------------------------------------------------------
+
+After the boiler introduction, Greg took us up to the attic to show us the glycerin based fire suppression,
+
+The clock tower has no insulation and is exposed to elements. The inside temperature would be few degrees higher than outside temperature during winter.
+
+Glycerin freezes at 0 degrees farenheit.
+
+He showed us 3 AHU, air handling units.
+
+North, Middle and South.
+
+He thought one of the 3rd floor units would be replaced.
+
+We thought one of the 2nd floor units was to be replaced next spring.
