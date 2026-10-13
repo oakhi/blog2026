@@ -1,5 +1,5 @@
 ---
-title: "Ginko Tree"
+title: "Ginko Trees"
 author: "DK"
 date: "2026-10-11"
 categories: [relationships]
@@ -13,34 +13,117 @@ categories: [relationships]
 
 반가웠고 잘 살아줘서 고맙네. 어디에 얼마나 멀리 살아도 늘 기억하고 추억하며 열심히 살고 건강하세.
 
-It really had been such a long time!
-
-The ginkgo tree, which lives a thousand years, can be seen once every few decades and still be fine.
-
-But people, who don’t even live a hundred years, should see each other at least once every few years—that’s what being relatives is all about.
-
-It was so good to see you, and thank you for living well.
-
-No matter where we live or how far apart we may be, let’s remember each other, cherish our memories, keep working hard, and stay healthy.
-
-Uncle Hong, October 2026
-
 ![](images/20261013_111452~2.jpg)
 
 ------------------------------------------------------------------------
 
-In life there are at least 2 families
+> *It really had been such a long time!*
+>
+> *The ginkgo tree, which lives a thousand years, can be seen once every few decades and still be fine.*
+>
+> *But people, who don’t even live a hundred years, should see each other at least once every few years—that’s what being relatives is all about.*
+>
+> *It was so good to see you, and thank you for living well.*
+>
+> *No matter where we live or how far apart we may be, let’s remember each other, cherish our memories, keep working hard, and stay healthy.*
+>
+> — **Uncle H, October 2026**
 
-The family that you are born into and the family that you become through marriage.
+---
 
-By marrying Sister K, I became acquainted with her eight aunts and two uncles.
+In life, we are blessed with at least two families: the family we are born into, and the family we join through marriage.
 
-One uncle is older than Sister K's father by a few years.
+When I married Sister K, my world expanded to include her extended family—a network that included eight aunts and two uncles.
 
-But the younger uncle is nearly 20 years younger.
+Her older uncle was a few years senior to her father, while her younger uncle was nearly twenty years younger, making him much closer to our own age.
 
-We made arrangements to visit him and his new wife.
+Recently, we made arrangements to visit this younger uncle, Uncle H, and his new wife.
 
-He suggested instead of visiting for a dinner, we should come earlier and he will show around the town,
+We had initially planned for a simple dinner, but Uncle H suggested something far better:
+
+> *"Instead of just coming for dinner, come earlier and let me show you around town."*
+
+His invitation demonstrated the wisdom of someone who understands how relationships work in life.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(leaflet)
+
+leaflet() |>
+  addProviderTiles("OpenStreetMap") |>
+  addMarkers(
+    lng = 127.00316,
+    lat = 36.78055,
+    popup = "온양온천역",
+    label = "온양온천역"
+  ) |>
+  addMarkers(
+    lng = 127.01813,
+    lat = 36.80004,
+    popup = "곡교천 은행나무길",
+    label = "곡교천 은행나무길"
+  ) |>
+  fitBounds(
+    lng1 = 127.000,
+    lat1 = 36.778,
+    lng2 = 127.022,
+    lat2 = 36.803
+  )
+```
+
+
+---
+
+Our walk took us along a street lined with ginkgo trees, now transformed into a pedestrian-only avenue
+
+The walk became both nostalgic and futuristic.
+
+As we walked beneath their canopy, Uncle H looked up at the branches and shared a piece of his history.
+
+Some sixty years ago, as a junior high student, he and his classmates were given time off from school to plant those very trees, which were about ten years old at the time.
+
+I asked with a touch of levity if that mandatory planting felt like forced labor in a work camp. He replied,
+
+> *"No, we worked with pride. We were born here, and we were beautifying our own town."*
+
+![](images/20261011_155129.jpg)
+
+As we walked, a group coming from the opposite direction stopped to exchange warm greetings. Uncle H welcomed them like old friends.
+
+It turned out his friend was a four-term 국회의원 *Gukhoe-uiwon*—a Member of the National Assembly.
+
+A short distance later, he waved to the chair of the festival music program who had attended the same school he did.
+
+Waves of friends, neighbors, and acquaintances continued to pass by—a fruit of living in the same town for over seventy years.
+
+![](images/20261011_161519.jpg)
+
+Eventually, he directed our walk toward the river, where sections of carefully curated flowers bloomed along the banks.
+
+There, by the water, his attention shifted from the past to our future.
+
+He offered us counsel drawn from his own life, ranging from financial wisdom to the nuances of family relations.
+
+He spoke not in a lecturing tone, but with the quiet, concern of a family member, 작은아버지 (*Jageun-abeoji)*—a "little father."
+
+By the time we turned back, we were a few minutes late for dinner.
+
+But as we climbed up to the fourth-floor living area overlooking the Onyang Market 온양시장 area, we understood why we had taken that three-hour detour.
+
+---
+
+His wife of six years had spent hours—perhaps days—preparing a feast fit for honored guests.
+
+I had rarely seen so many dishes presented in a single sitting, each one prepared with care and love.
+
+This was my first time meeting 작은엄마, connected to her only through the bonds of marriage.
+
+Yet she honored us out of her devotion and commitment to the family.
+
+I came away from that visit both enriched and resolved—deeply grateful for the family I gained through marriage, and inspired by a quiet resolve to live more like Uncle H.
 
 ![](images/1791714680376.jpg)
