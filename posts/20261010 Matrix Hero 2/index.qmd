@@ -9,7 +9,7 @@ The 13-hour flight was beginning to feel like a full day’s journey.
 
 Fighting a 180 mph headwind, it was as if we were treading water, 38,000 feet above the Pacific Ocean, suspended somewhere near the International Date Line.
 
-Desperate for a distraction that might speed up the clock, I opened the in-flight entertainment system, and began browsing the movie selection.
+Desperate for a distraction to make the time pass faster, I opened the in-flight entertainment system, and began browsing the movie selection.
 
 I scrolled over to a category labeled *Critically Acclaimed*.
 
@@ -19,7 +19,7 @@ As I browsed, a series of titles stood out — *The Matrix*.
 
 I had heard people talk about this film for decades, but I had never actually seen it for myself.
 
----
+------------------------------------------------------------------------
 
 I settled on the first in the series, released in 1999.
 
@@ -37,7 +37,7 @@ At least the flight data gave me a sense of progression, showing a quantifiable 
 
 Then, the story and the flight progression converged.
 
----
+------------------------------------------------------------------------
 
 As our plane skirted the Kamchatka Peninsula and crossed the Sea of Okhotsk, the heavy headwinds finally eased.
 
