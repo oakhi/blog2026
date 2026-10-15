@@ -1,0 +1,280 @@
+---
+title: "Global Equity Benchmarks & MANGO-S AI Cluster Analysis (2026 YTD)"
+subtitle: "Cross-Market Study: KOSPI, Asian & US Indices vs. MANGO-S AI Infrastructure Equities"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: flatly
+    code-fold: show
+    fig-width: 10
+    fig-height: 9
+params:
+  start_date: "2026-01-01"
+  end_date: "2026-10-15"
+  peak_date: "2026-06-19"
+  # Global Market Benchmarks
+  index_names: "KOSPI,Taiwan_TAIEX,Japan_Nikkei225,US_Nasdaq,US_DowJones"
+  index_symbols: "^KS11,^TWII,^N225,^IXIC,^DJI"
+  # MANGO-S AI & Tech Infrastructure Cluster (Public Tickers & Strategic Proxies)
+  mangos_names: "Meta,Anthropic_AMZN,Nvidia,Google,OpenAI_MSFT,SpaceX_TSLA"
+  mangos_symbols: "META,AMZN,NVDA,GOOGL,MSFT,TSLA"
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(quantmod)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(patchwork)
+library(scales)
+library(knitr)
+
+# Parameter Variable Substitution
+START_DATE <- as.Date(params$start_date)
+END_DATE   <- as.Date(params$end_date)
+PEAK_DATE  <- as.Date(params$peak_date)
+
+# Parse parameter comma-separated strings
+idx_names_vec   <- unlist(strsplit(params$index_names, ","))
+idx_symbols_vec <- unlist(strsplit(params$index_symbols, ","))
+INDEX_TICKERS   <- setNames(idx_symbols_vec, idx_names_vec)
+
+mangos_names_vec   <- unlist(strsplit(params$mangos_names, ","))
+mangos_symbols_vec <- unlist(strsplit(params$mangos_symbols, ","))
+MANGOS_TICKERS     <- setNames(mangos_symbols_vec, mangos_names_vec)
+
+ALL_TICKERS <- c(INDEX_TICKERS, MANGOS_TICKERS)
+```
+
+## Executive Summary
+
+This report delivers a cross-market comparative analysis spanning **`r START_DATE`** through **`r END_DATE`**.
+
+The benchmark coverage is split into two primary investment asset groups:
+1. **Global Equity Indices:** KOSPI (`^KS11`), TAIEX (`^TWII`), Nikkei 225 (`^N225`), Nasdaq (`^IXIC`), and Dow Jones (`^DJI`).
+2. **MANGO-S AI Infrastructure Cluster:**
+   * **M** – **Meta** (`META`)
+   * **A** – **Anthropic** *(via Amazon `AMZN` strategic proxy)*
+   * **N** – **Nvidia** (`NVDA`)
+   * **G** – **Google / Alphabet** (`GOOGL`)
+   * **O** – **OpenAI** *(via Microsoft `MSFT` strategic proxy)*
+   * **S** – **SpaceX / xAI** *(via Tesla `TSLA` strategic proxy)*
+
+---
+
+## 1. Automated Data Ingestion & Transformation
+
+```{r}
+#| label: fetch-data
+#| message: false
+#| warning: false
+
+# Download all OHLCV market series in a single quantmod call
+getSymbols(unname(ALL_TICKERS), src = "yahoo", from = START_DATE, to = END_DATE, auto.assign = TRUE)
+
+# Robust data parsing helper function
+process_market_data <- function(display_name, symbol, category_group) {
+  env_obj_name <- gsub("^\\^", "", symbol)
+  
+  if (!exists(env_obj_name)) {
+    warning(paste("Symbol object not found in environment:", env_obj_name))
+    return(NULL)
+  }
+  
+  xts_obj <- get(env_obj_name)
+  
+  df <- data.frame(
+    Date   = index(xts_obj),
+    Close  = as.numeric(xts_obj[, 4]), # Closing price/level
+    Volume = as.numeric(xts_obj[, 5])  # Trading volume
+  ) %>%
+    na.omit() %>%
+    filter(Date >= START_DATE & Date <= END_DATE) %>%
+    arrange(Date) %>%
+    mutate(
+      Index_Name       = display_name,
+      Asset_Name       = display_name,  # Alias to ensure backwards compatibility
+      Category         = category_group,
+      Normalized_Close = (Close / first(Close)) * 100, # Base 100 normalization
+      Daily_Return_Pct = (Close - lag(Close)) / lag(Close) * 100,
+      Volume_M         = Volume / 1e6,
+      Direction        = ifelse(Daily_Return_Pct >= 0, "Up", "Down")
+    )
+  
+  return(df)
+}
+
+# Process both asset categories
+df_indices_tmp <- bind_rows(lapply(names(INDEX_TICKERS), function(n) {
+  process_market_data(n, INDEX_TICKERS[[n]], "Global Market Index")
+}))
+
+df_mangos_tmp <- bind_rows(lapply(names(MANGOS_TICKERS), function(n) {
+  process_market_data(n, MANGOS_TICKERS[[n]], "MANGO-S AI Cluster")
+}))
+
+# Master Combined Dataframe
+df_all_markets <- bind_rows(df_indices_tmp, df_mangos_tmp)
+
+# Explicit Subsets for Categorical Plots
+df_indices <- df_all_markets %>% filter(Category == "Global Market Index")
+df_mangos  <- df_all_markets %>% filter(Category == "MANGO-S AI Cluster")
+```
+
+---
+
+## 2. Relative Base-100 Performance Trajectories
+
+Indexing each market to **100 on `r START_DATE`** allows direct multi-asset comparison without point-scale distortion.
+
+```{r}
+#| label: fig-relative-performance-indices
+#| fig-cap: "Indexed Global Market Indices (Base = 100 at Start of 2026)"
+#| warning: false
+
+ggplot(df_indices, aes(x = Date, y = Normalized_Close, color = Index_Name)) +
+  geom_hline(yintercept = 100, color = "gray40", linetype = "solid", linewidth = 0.5) +
+  geom_vline(xintercept = PEAK_DATE, color = "firebrick", linetype = "dashed", linewidth = 0.6) +
+  geom_line(linewidth = 0.9) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "Relative Trajectories: Global Benchmark Indices",
+    x = "Date",
+    y = "Indexed Level (Base = 100)",
+    color = "Global Index"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom", plot.title = element_text(face = "bold", size = 13))
+```
+
+```{r}
+#| label: fig-relative-performance-mangos
+#| fig-cap: "Indexed MANGO-S AI Cluster Performance (Base = 100 at Start of 2026)"
+#| warning: false
+
+ggplot(df_mangos, aes(x = Date, y = Normalized_Close, color = Index_Name)) +
+  geom_hline(yintercept = 100, color = "gray40", linetype = "solid", linewidth = 0.5) +
+  geom_vline(xintercept = PEAK_DATE, color = "firebrick", linetype = "dashed", linewidth = 0.6) +
+  geom_line(linewidth = 0.9) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "Relative Trajectories: MANGO-S AI Infrastructure Equities",
+    x = "Date",
+    y = "Indexed Level (Base = 100)",
+    color = "MANGO-S Asset"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom", plot.title = element_text(face = "bold", size = 13))
+```
+
+---
+
+## 3. Individual Faceted Price & Index Trends
+
+```{r}
+#| label: fig-faceted-indices
+#| fig-cap: "Faceted Closing Levels: Global Market Benchmarks"
+#| fig-height: 8
+#| warning: false
+
+ggplot(df_indices, aes(x = Date, y = Close, color = Index_Name)) +
+  geom_vline(xintercept = PEAK_DATE, color = "firebrick", linetype = "dashed", linewidth = 0.5) +
+  geom_line(linewidth = 0.8) +
+  facet_wrap(~ Index_Name, scales = "free_y", ncol = 1) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
+  scale_y_continuous(labels = comma) +
+  labs(title = "Individual Global Benchmark Closing Levels", x = "Date", y = "Index Level") +
+  theme_minimal() +
+  theme(legend.position = "none", strip.text = element_text(face = "bold"))
+```
+
+```{r}
+#| label: fig-faceted-mangos
+#| fig-cap: "Faceted Closing Prices ($USD): MANGO-S Equities"
+#| fig-height: 9
+#| warning: false
+
+ggplot(df_mangos, aes(x = Date, y = Close, color = Index_Name)) +
+  geom_vline(xintercept = PEAK_DATE, color = "firebrick", linetype = "dashed", linewidth = 0.5) +
+  geom_line(linewidth = 0.8) +
+  facet_wrap(~ Index_Name, scales = "free_y", ncol = 1) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
+  scale_y_continuous(labels = comma) +
+  labs(title = "Individual MANGO-S Equity Share Prices ($USD)", x = "Date", y = "Price ($)") +
+  theme_minimal() +
+  theme(legend.position = "none", strip.text = element_text(face = "bold"))
+```
+
+---
+
+## 4. Single-Page Focus Dashboard: KOSPI vs. Nvidia (`NVDA`)
+
+```{r}
+#| label: fig-dashboard-patchwork
+#| fig-cap: "Comparative Dashboard Breakdown: KOSPI Benchmark vs. Nvidia (NVDA)"
+#| fig-height: 9
+#| warning: false
+
+# Safely filter directly from df_all_markets
+df_kospi <- df_all_markets %>% filter(Index_Name == "KOSPI")
+df_nvda  <- df_all_markets %>% filter(Index_Name == "Nvidia")
+
+p_kospi <- ggplot(df_kospi, aes(x = Date, y = Close)) +
+  geom_line(color = "#1f77b4", linewidth = 1) +
+  scale_y_continuous(labels = comma) +
+  labs(title = "KOSPI Index Close Level", y = "Index Level", x = NULL) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold", size = 11), axis.text.x = element_blank())
+
+p_nvda <- ggplot(df_nvda, aes(x = Date, y = Close)) +
+  geom_line(color = "#76b900", linewidth = 1) + # Nvidia green
+  scale_y_continuous(labels = comma) +
+  labs(title = "Nvidia (NVDA) Share Price ($USD)", y = "Price ($)", x = NULL) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold", size = 11), axis.text.x = element_blank())
+
+p_returns <- ggplot() +
+  geom_line(data = df_kospi, aes(x = Date, y = Daily_Return_Pct, color = "KOSPI"), linewidth = 0.6, alpha = 0.8) +
+  geom_line(data = df_nvda, aes(x = Date, y = Daily_Return_Pct, color = "Nvidia"), linewidth = 0.6, alpha = 0.8) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray30") +
+  scale_color_manual(values = c("KOSPI" = "#1f77b4", "Nvidia" = "#76b900")) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
+  labs(title = "Daily Return Overlay (%)", y = "Daily Change (%)", x = "Date", color = "Asset") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold", size = 11), legend.position = "bottom")
+
+# Combine panels vertically using patchwork
+p_kospi / p_nvda / p_returns
+```
+
+---
+
+## 5. Integrated Statistical Summary
+
+```{r}
+#| label: tbl-summary-stats
+
+summary_table <- df_all_markets %>%
+  group_by(Category, Index_Name) %>%
+  summarize(
+    Start_Close      = first(Close),
+    Current_Close    = last(Close),
+    Period_High      = max(Close, na.rm = TRUE),
+    Period_Low       = min(Close, na.rm = TRUE),
+    Total_Return     = paste0(round(((last(Close) - first(Close)) / first(Close)) * 100, 2), "%"),
+    Daily_Volatility = round(sd(Daily_Return_Pct, na.rm = TRUE), 2),
+    .groups          = "drop"
+  )
+
+kable(
+  summary_table, 
+  col.names = c("Category Group", "Asset / Ticker", "Start Price", "Current Price", "Period High", "Period Low", "Total Return (%)", "Daily Volatility (Std Dev)")
+)
+```
