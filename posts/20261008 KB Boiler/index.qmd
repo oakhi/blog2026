@@ -2,6 +2,7 @@
 title: "Knight Block Winterization"
 author: "DK"
 date: "2026-10-08"
+draft: yes
 categories: [comfort, heat]
 ---
 
