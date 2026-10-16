@@ -1,7 +1,7 @@
 ---
 title: "Global Equity Benchmarks & MANGO-S AI Cluster Analysis (2026 YTD)"
 subtitle: "Cross-Market Study: KOSPI, Asian & US Indices vs. MANGO-S AI Infrastructure Equities"
-date: today
+date: "2026-10-16"
 format:
   html:
     toc: true
@@ -55,17 +55,15 @@ ALL_TICKERS <- c(INDEX_TICKERS, MANGOS_TICKERS)
 
 This report delivers a cross-market comparative analysis spanning **`r START_DATE`** through **`r END_DATE`**.
 
-The benchmark coverage is split into two primary investment asset groups:
-1. **Global Equity Indices:** KOSPI (`^KS11`), TAIEX (`^TWII`), Nikkei 225 (`^N225`), Nasdaq (`^IXIC`), and Dow Jones (`^DJI`).
-2. **MANGO-S AI Infrastructure Cluster:**
-   * **M** – **Meta** (`META`)
-   * **A** – **Anthropic** *(via Amazon `AMZN` strategic proxy)*
-   * **N** – **Nvidia** (`NVDA`)
-   * **G** – **Google / Alphabet** (`GOOGL`)
-   * **O** – **OpenAI** *(via Microsoft `MSFT` strategic proxy)*
-   * **S** – **SpaceX / xAI** *(via Tesla `TSLA` strategic proxy)*
+The benchmark coverage is split into two primary investment asset groups: 1. **Global Equity Indices:** KOSPI (`^KS11`), TAIEX (`^TWII`), Nikkei 225 (`^N225`), Nasdaq (`^IXIC`), and Dow Jones (`^DJI`). 2. **MANGO-S AI Infrastructure Cluster:** \* **M** – **Meta** (`META`) \* **A** – **Anthropic** *(via Amazon `AMZN` strategic proxy)* \* **N** – **Nvidia** (`NVDA`) \* **G** – **Google / Alphabet** (`GOOGL`) \* **O** – **OpenAI** *(via Microsoft `MSFT` strategic proxy)* \* **S** – **SpaceX / xAI** *(via Tesla `TSLA` strategic proxy)*
 
----
+::: callout-caution
+In financial analysis and market reporting, a **public proxy match** is used when you want to track or benchmark a private, unlisted company (or a non-traded asset) using a publicly traded company that serves as its closest financial or operational equivalent.
+
+Because companies like **Anthropic**, **OpenAI**, and **SpaceX / xAI** are private, they do not have real-time stock prices or ticker symbols on exchanges like NASDAQ or the NYSE. Using public proxies bridges this gap in automated reports.
+:::
+
+------------------------------------------------------------------------
 
 ## 1. Automated Data Ingestion & Transformation
 
@@ -126,7 +124,7 @@ df_indices <- df_all_markets %>% filter(Category == "Global Market Index")
 df_mangos  <- df_all_markets %>% filter(Category == "MANGO-S AI Cluster")
 ```
 
----
+------------------------------------------------------------------------
 
 ## 2. Relative Base-100 Performance Trajectories
 
@@ -174,7 +172,7 @@ ggplot(df_mangos, aes(x = Date, y = Normalized_Close, color = Index_Name)) +
   theme(legend.position = "bottom", plot.title = element_text(face = "bold", size = 13))
 ```
 
----
+------------------------------------------------------------------------
 
 ## 3. Individual Faceted Price & Index Trends
 
@@ -212,7 +210,7 @@ ggplot(df_mangos, aes(x = Date, y = Close, color = Index_Name)) +
   theme(legend.position = "none", strip.text = element_text(face = "bold"))
 ```
 
----
+------------------------------------------------------------------------
 
 ## 4. Single-Page Focus Dashboard: KOSPI vs. Nvidia (`NVDA`)
 
@@ -254,7 +252,7 @@ p_returns <- ggplot() +
 p_kospi / p_nvda / p_returns
 ```
 
----
+------------------------------------------------------------------------
 
 ## 5. Integrated Statistical Summary
 
