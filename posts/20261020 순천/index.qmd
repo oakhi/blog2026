@@ -1,0 +1,63 @@
+---
+title: "순천"
+author: "DK"
+date: "2026-10-20"
+execute: 
+  echo: false
+categories: [여행]
+---
+
+```{r}
+#| label: fig-suncheon-map
+#| fig-cap: "주요 관광지 위치 — 순천"
+#| warning: false
+#| message: false
+
+library(leaflet)
+library(dplyr)
+
+places <- data.frame(
+  name = c(
+    "선암사 (Seonamsa Temple)",
+    "송광사 (Songgwangsa Temple)",
+    "낙안읍성 (Naganeupseong Folk Village)",
+    "순천만 갈대밭 (Suncheon Bay Reed Fields)"
+  ),
+  lat = c(34.99646, 35.00190, 34.90694, 34.87208),
+  lng = c(127.33091, 127.27560, 127.33889, 127.51743)
+)
+
+leaflet(places) |>
+  addProviderTiles("OpenStreetMap") |>
+  addMarkers(
+    lng = ~lng,
+    lat = ~lat,
+    label = ~name,
+    popup = ~paste0(
+      "<b>", name, "</b><br>",
+      "위도: ", lat, "<br>",
+      "경도: ", lng
+    )
+  ) |>
+  fitBounds(
+    lng1 = min(places$lng) - 0.01,
+    lat1 = min(places$lat) - 0.01,
+    lng2 = max(places$lng) + 0.01,
+    lat2 = max(places$lat) + 0.01
+  )
+
+```
+
+
+It is a rare in life when one is the giver and recipient of pay forward concept.
+
+It is rare for the giver and the recipient to be the same person in pay forward concept
+
+At the turn of the century, I was working in an industrial complex with well known names like LG and Samsung nearby.
+
+We had bought a leading Korean manufacturer of medical devices and I was in Korea helping with upgrading facilities and integrating the organization into the global operations
+
+---
+
+Rarely do we get to be both the giver and the recipient in the act of paying it forward
+

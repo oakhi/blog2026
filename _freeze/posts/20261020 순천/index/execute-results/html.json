@@ -1,0 +1,18 @@
+{
+  "hash": "e4b78606f1241b73899547549406a8cc",
+  "result": {
+    "markdown": "---\ntitle: \"순천\"\nauthor: \"DK\"\ndate: \"2026-10-20\"\nexecute: \n  echo: false\ncategories: [여행]\n---\n\n::: {.cell}\n::: {#fig-suncheon-map .cell-output-display}\n```{=html}\n<div class=\"leaflet html-widget html-fill-item\" id=\"htmlwidget-8c94078632db782503ed\" style=\"width:100%;height:464px;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-8c94078632db782503ed\">{\"x\":{\"options\":{\"crs\":{\"crsClass\":\"L.CRS.EPSG3857\",\"code\":null,\"proj4def\":null,\"projectedBounds\":null,\"options\":{}}},\"calls\":[{\"method\":\"addProviderTiles\",\"args\":[\"OpenStreetMap\",null,null,{\"errorTileUrl\":\"\",\"noWrap\":false,\"detectRetina\":false}]},{\"method\":\"addMarkers\",\"args\":[[34.99646,35.0019,34.90694,34.87208],[127.33091,127.2756,127.33889,127.51743],null,null,null,{\"interactive\":true,\"draggable\":false,\"keyboard\":true,\"title\":\"\",\"alt\":\"\",\"zIndexOffset\":0,\"opacity\":1,\"riseOnHover\":false,\"riseOffset\":250},[\"<b>선암사 (Seonamsa Temple)<\\/b><br>위도: 34.99646<br>경도: 127.33091\",\"<b>송광사 (Songgwangsa Temple)<\\/b><br>위도: 35.0019<br>경도: 127.2756\",\"<b>낙안읍성 (Naganeupseong Folk Village)<\\/b><br>위도: 34.90694<br>경도: 127.33889\",\"<b>순천만 갈대밭 (Suncheon Bay Reed Fields)<\\/b><br>위도: 34.87208<br>경도: 127.51743\"],null,null,null,[\"선암사 (Seonamsa Temple)\",\"송광사 (Songgwangsa Temple)\",\"낙안읍성 (Naganeupseong Folk Village)\",\"순천만 갈대밭 (Suncheon Bay Reed Fields)\"],{\"interactive\":false,\"permanent\":false,\"direction\":\"auto\",\"opacity\":1,\"offset\":[0,0],\"textsize\":\"10px\",\"textOnly\":false,\"className\":\"\",\"sticky\":true},null]}],\"limits\":{\"lat\":[34.87208,35.0019],\"lng\":[127.2756,127.51743]},\"fitBounds\":[34.86208,127.2656,35.0119,127.52743,[]]},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n\n주요 관광지 위치 — 순천\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/leaflet-1.3.1/leaflet.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/leaflet-1.3.1/leaflet.js\"></script>\n<link href=\"../../site_libs/leafletfix-1.0.0/leafletfix.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/proj4-2.6.2/proj4.min.js\"></script>\n<script src=\"../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js\"></script>\n<link href=\"../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/leaflet-binding-2.2.2/leaflet.js\"></script>\n<script src=\"../../site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js\"></script>\n<script src=\"../../site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

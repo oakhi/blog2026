@@ -2,6 +2,7 @@
 title: "Mixed Life"
 author: "DK"
 date: "2026-10-15"
+draft: yes
 categories: [fragile]
 ---
 
@@ -29,7 +30,7 @@ But it served its purpose. It conveyed the feelings I had for Sister K in a medi
 
 It was personal, physical, and uniquely created for her.
 
----
+------------------------------------------------------------------------
 
 Today we are flooded with music, the amount that cannot possibly be consumed let alone remotely understood.
 
