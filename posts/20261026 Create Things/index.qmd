@@ -1,11 +1,11 @@
 ---
-title: "Necessary Things"
+title: "Essential Things"
 author: "DK"
 date: "2026-10-26"
-categories: [necessary]
+categories: [esential]
 ---
 
-Link to English Version\[[English]\]
+Link to English Version [[English]]
 
 최근 몇 년 사이, 아시아의 한 국가를 찾는 관광객이 급격히 늘어났다.
 
@@ -48,6 +48,8 @@ Link to English Version\[[English]\]
 하지만 나는 눈에 보이는 물건보다 훨씬 더 커다란 선물을 안고 돌아간다. 내가 남한에 정착하여 새로운 나라와 독립적이면서도 서로 의지하며 놀라운 삶을 일구어낸 이북 실향민의 후손이라는 사실, 그리고 미국에서 기독교적이고 서구적인 전통 속에 교육받고 자라났다는 사실을 다시금 확인한 것이다.
 
 이 두 가지 유산 모두에 대해 깊이 감사한다. 한자리에 서서 나의 삶을 돌아보고, 한 가지 이상의 수많은 이유로 감사할 수 있다는 사실에 말이다.
+
+![](images/20261021_163928~2.jpg)
 
 ## English
 
@@ -99,4 +101,3 @@ Yet I carry back a far greater gift than anything tangible: a reminder that I be
 
 For both of these heritages, I am deeply appreciative. That I can stand in one place, think through my life, and be thankful in more ways than one.
 
-![](images/20261021_163928~2.jpg)
