@@ -1,0 +1,109 @@
+---
+title: "아름다운 강산"
+author: "DK"
+date: "2026-10-27"
+format:
+  html:
+    embed-resources: false
+draft: yes
+categories: [journey home]
+---
+
+## How Big Is South Korea?
+
+South Korea is a relatively small country in geographic size, but it packs an extraordinary amount of history, culture, industry, and natural variety into its territory. Covering approximately **100,000 square kilometers (38,600 square miles)**, it is roughly the size of the U.S. state of Indiana, or about one-quarter the size of California. It is also a little smaller than Iceland and slightly larger than Portugal.
+
+To put the distances into perspective, South Korea stretches roughly **450 kilometers (280 miles) from north to south** and about **300 kilometers (185 miles) from east to west** at its widest points. A drive from Seoul to Busan, the country's second-largest city, covers approximately 325–400 kilometers (200–250 miles), depending on the route. Under favorable conditions, the journey takes around four to five hours by car, while the high-speed KTX train can make it in roughly two and a half to three hours.
+
+Yet South Korea is not simply a compact urban landscape. Mountains cover a large portion of the country, creating dramatic scenery, national parks, and valleys between its cities. The east coast, west coast, and southern coastline each have their own character, while Jeju Island, off the southern coast, offers a distinctive volcanic landscape.
+
+The country's compact size also makes travel remarkably convenient. In a single trip, visitors can move from the palaces and busy neighborhoods of Seoul to the historic temples of Gyeongju, the beaches of Busan, the green tea fields of Boseong, or the mountain scenery of Odaesan without crossing enormous distances.
+
+**The striking thing about South Korea is the contrast between its modest geographic footprint and its outsized presence in the world.** It is small enough to explore by train or car, yet diverse enough to offer very different landscapes, regional traditions, and experiences within a relatively short journey.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(leaflet)
+library(dplyr)
+
+# Approximate coordinates: latitude and longitude
+locations <- data.frame(
+  name = c(
+    "순천", "오대산", "천안", "구미", "대구",
+    "강남역", "주안", "인천공항", "온양"
+  ),
+  name_en = c(
+    "Suncheon", "Odaesan National Park", "Cheonan",
+    "Gumi", "Daegu", "Gangnam Station", "Juan Station",
+    "Incheon International Airport", "Onyang Oncheon"
+  ),
+  lat = c(
+    34.9481, 37.7900, 36.8151, 36.1195, 35.8714,
+    37.4979, 37.4640, 37.4602, 36.7800
+  ),
+  lon = c(
+    127.4895, 128.5630, 127.1139, 128.3445, 128.6014,
+    127.0276, 126.6790, 126.4407, 127.0030
+  )
+)
+
+# Create interactive map
+leaflet(data = locations) |>
+  # OpenStreetMap tiles: no CARTO API key required
+  addTiles(
+    group = "OpenStreetMap",
+    attribution = paste(
+      '&copy; <a href="https://www.openstreetmap.org/copyright">',
+      'OpenStreetMap</a> contributors'
+    )
+  ) |>
+  addCircleMarkers(
+    lng = ~lon,
+    lat = ~lat,
+    radius = 7,
+    color = "#1769AA",
+    fillColor = "#42A5F5",
+    fillOpacity = 0.85,
+    weight = 2,
+    popup = ~paste0(
+      "<b>", name, "</b><br>",
+      name_en, "<br>",
+      "Latitude: ", lat, "<br>",
+      "Longitude: ", lon
+    ),
+    label = ~name,
+    labelOptions = labelOptions(
+      direction = "top",
+      offset = c(0, -6)
+    )
+  ) |>
+  # Persistent Korean labels
+  addLabelOnlyMarkers(
+    lng = ~lon,
+    lat = ~lat,
+    label = ~name,
+    labelOptions = labelOptions(
+      noHide = TRUE,
+      direction = "top",
+      textOnly = TRUE,
+      offset = c(0, -10),
+      style = list(
+        "font-size" = "12px",
+        "font-weight" = "bold",
+        "color" = "#222222",
+        "text-shadow" = "1px 1px 2px white"
+      )
+    )
+  ) |>
+  # Fit map to all locations with a little padding
+  fitBounds(
+    lng1 = min(locations$lon) - 0.15,
+    lat1 = min(locations$lat) - 0.15,
+    lng2 = max(locations$lon) + 0.15,
+    lat2 = max(locations$lat) + 0.15
+  )
+```
+
