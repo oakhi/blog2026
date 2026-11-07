@@ -2,6 +2,7 @@
 title: "순천"
 author: "DK"
 date: "2026-10-20"
+draft: yes
 execute: 
   echo: false
 categories: [여행]
@@ -48,7 +49,6 @@ leaflet(places) |>
 
 ```
 
-
 It is a rare in life when one is the giver and recipient of pay forward concept.
 
 It is rare for the giver and the recipient to be the same person in pay forward concept
@@ -57,7 +57,6 @@ At the turn of the century, I was working in an industrial complex with well kno
 
 We had bought a leading Korean manufacturer of medical devices and I was in Korea helping with upgrading facilities and integrating the organization into the global operations
 
----
+------------------------------------------------------------------------
 
 Rarely do we get to be both the giver and the recipient in the act of paying it forward
-

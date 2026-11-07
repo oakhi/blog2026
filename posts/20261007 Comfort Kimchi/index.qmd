@@ -2,6 +2,7 @@
 title: "Kimchi Home"
 author: "DK"
 date: "2026-10-07"
+draft: yes
 categories: [comfort, food]
 ---
 
