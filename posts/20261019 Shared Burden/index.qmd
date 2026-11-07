@@ -2,6 +2,7 @@
 title: "Shared Burdens"
 author: "DK"
 date: "2026-10-19"
+draft: yes
 categories: [burdens]
 ---
 

@@ -2,6 +2,7 @@
 title: "Clear and Present Goal"
 author: "DK"
 date: "2026-10-05"
+draft: yes
 categories: [outdoors]
 execute: 
   echo: false

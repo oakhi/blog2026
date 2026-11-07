@@ -2,6 +2,7 @@
 title: "Indian Hills"
 author: "DK"
 date: "2026-10-03"
+draft: yes
 categories: [neighborhoods]
 ---
 

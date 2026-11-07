@@ -2,6 +2,7 @@
 title: "SKY Universe"
 author: "DK"
 date: "2026-10-17"
+draft: yes
 categories: [exclusive]
 ---
 
@@ -23,7 +24,7 @@ The significance of SKY extends beyond academic achievement: -
 
 -   National leadership: Graduates are well represented in business, government, academia, law, and other leadership positions.
 
----
+------------------------------------------------------------------------
 
 Founded in 1946, SNU is South Korea's leading national public university. Its main campus is in Gwanak, southern Seoul. It is particularly recognized for research, engineering, medicine, law, and the humanities. <https://en.snu.ac.kr/index.html>
 

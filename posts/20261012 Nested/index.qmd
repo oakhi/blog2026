@@ -2,6 +2,7 @@
 title: "Nested Communication"
 author: "DK"
 date: "2026-10-12"
+draft: yes
 categories: [harmony]
 ---
 
