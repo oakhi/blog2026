@@ -1,8 +1,32 @@
 ---
-title: "반찬인생"
+title: "SKY Universe"
 author: "DK"
-date: "2026-10-14"
-categories: [harmony]
+date: "2026-10-17"
+categories: [exclusive]
 ---
 
-![](images/20261012_094517.jpg)
+Every family in Korea shoots for the SKY.
+
+-   **S** - Seoul National University (서울대학교, SNU)
+-   **K** — Korea University (고려대학교, KU)
+-   **Y** — Yonsei University (연세대학교, YU)
+
+## Why SKY matters in Korean society
+
+The significance of SKY extends beyond academic achievement: -
+
+-   Education and competition: Admission is the culmination of years of preparation, particularly for the national university entrance examination (수능).
+
+-   Career opportunities: A SKY degree can provide access to influential professional networks and highly competitive employment opportunities.
+
+-   Social standing: University affiliation can carry considerable weight in how individuals are perceived socially and professionally.
+
+-   National leadership: Graduates are well represented in business, government, academia, law, and other leadership positions.
+
+---
+
+Founded in 1946, SNU is South Korea's leading national public university. Its main campus is in Gwanak, southern Seoul. It is particularly recognized for research, engineering, medicine, law, and the humanities. <https://en.snu.ac.kr/index.html>
+
+Founded in 1905, Korea University is a private research university located in Anam, northeastern Seoul. It has a particularly strong reputation in business, law, political science, and the social sciences. Its crimson colors and traditional campus architecture are distinctive <https://www.korea.edu/sites/en/index.do>
+
+Founded in 1885 through the origins of modern Western medical education in Korea, Yonsei is a private research university in Sinchon, western Seoul. It is especially known for medicine, business, international studies, and liberal arts. Its modern institutional identity dates to the 1957 merger of Yonhi University and Severance Medical School. <https://www.yonsei.ac.kr/en_sc/index.do>

@@ -2,6 +2,7 @@
 title: "Global Equity Benchmarks & MANGO-S AI Cluster Analysis (2026 YTD)"
 subtitle: "Cross-Market Study: KOSPI, Asian & US Indices vs. MANGO-S AI Infrastructure Equities"
 date: "2026-10-16"
+draft: yes
 format:
   html:
     toc: true
