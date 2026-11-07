@@ -1,5 +1,5 @@
 ---
-title: "Essential Things"
+title: "Essential Items"
 author: "DK"
 date: "2026-10-26"
 categories: [esentials]
