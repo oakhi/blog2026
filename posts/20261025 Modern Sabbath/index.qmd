@@ -4,7 +4,6 @@ author: "DK"
 date: "2026-10-25"
 execute: 
   echo: false
-draft: no
 categories: [sabbath]
 ---
 
