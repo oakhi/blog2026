@@ -1,0 +1,13 @@
+---
+title: "Mongolian Rim"
+author: "DK"
+date: "2026-11-01"
+draft: yes
+execute: 
+  echo: false
+categories: [가족]
+---
+
+A Residence on Arizona’s Mogollon Rim Features Classic Japanese Elements
+
+<https://www.architecturaldigest.com/gallery/longstretch-slideshow>
